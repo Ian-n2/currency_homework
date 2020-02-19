@@ -19,9 +19,15 @@
   <option v-for="(key, value) in object.rates" :value=key> {{value}}</option>
 </select>
 
->
+
 <h2> {{exchange}}</h2>
 
+<label for="currency_select">Select Currency</label>
+<select id="currency_select" v-model.number="selectedCurrency">
+  <option disabled value></option>
+
+</select>
+<input type="number" name="" value="">
 
 
 

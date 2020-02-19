@@ -13,8 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     computed: {
       exchange: function() {
-        return (this.selectedCurrency / this.amountToExchange).toFixed(2);
+        return (this.selectedCurrency * this.amountToExchange).toFixed(2);
+      },
+      reverse: function() {
+        return (this.amountToExchange * this.selectedCurrency).toFixed(2);
       }
+
     },
     methods:{
       getcurrency: function(){
